@@ -3,7 +3,7 @@
 
 $gray: #999;
 $light-gray: #EEE;
-$manchester-violet: #50007F;
+$manchester-violet: #64308C;
 $manchester-violet-20: #C5B4CC;
 $manchester-violet-10: #EDE6F2;
 $manchester-violet-5: #F7F3F8;
@@ -16,6 +16,10 @@ body {
     font-family:Helvetica;
 }
 
+.nav-link.active {
+  background-color: $manchester-violet !important;
+  //background-color: rgb(87, 19, 126) !important;
+}
 
 a {
   color: $manchester-violet;
@@ -176,3 +180,6 @@ h1,h2,h3 {
 } 
 
 
+li.nav-link active { 
+    background-color: black
+}
