@@ -5,18 +5,12 @@ notitle: true
 
 # groups of columns of {roles: list, width: num, image: bool}
 role-tables:
-- - roles: [faculty, postdoc, staff]
-    width: 4
+- - roles: [member]
+    width: 20 
     image: true
-  - roles: [grad]
-    width: 8
-    image: true
-- - roles: [collab, ugrad, ugrad-alum]
-    width: 5
-    image: false
-  - roles: [alum]
-    width: 7
-    image: false
+  - roles: [alumni]
+    width: 20 
+    image: true 
 
 ---
 <section>
@@ -31,8 +25,8 @@ role-tables:
       <a href="https://www.cs.manchester.ac.uk/research/expertise/systems-and-software-security/">Software and Systems Security group</a>
       at the <a href="https://www.manchester.ac.uk/">University of Manchester</a>
       (<a href="https://www.cs.manchester.ac.uk/">Department of Computer Science</a>), led by
-      <a href="https://wintered.github.io">Dominik Winterer</a>, aims at driving
-      Formal Methods to mainstream adoption, making critical software bugs extremely rare.
+      <a href="https://wintered.github.io">Dominik Winterer</a>, aims at 
+      solidifying Formal Methods and other software by automated bug finding.    
     </p>
 
     <div>
@@ -47,78 +41,42 @@ role-tables:
 </section>
 
 <section>
-    <div id="openings">
-    <h3> Openings</h3>
-    <div class="jumbotron jumbotron-green">
-        <p><span style="color:red"><strong>We are hiring! I am looking for PhD students 👩‍🎓👨‍🎓 and visitors 🧳🧑‍🤝‍🧑 
-
-</strong></span></p>
-        <p><em>Qualities of ideal candidates include:</em></p>
-        <ul>
-            <li>Strong implementation skills and a desire to create open-source tools</li>
-            <li>The ability to come up with original research ideas and develop new approaches</li>
-            <li>Being unafraid to tackle challenging, important research problems, question existing assumptions/paradigms, and do interdisciplinary work</li>
-            <li>An interest in improving both technical and non-technical skills</li>
-            <li>Resilience and persistence to deal with and work through setbacks</li>
-            <li>A desire to write, publish, and present at top venues (PLDI, ICSE, OOPSLA, FSE, CAV, CCS, etc.)</li>
-            <li>Motivation to share their work with the community (through presentations, peer discussions, personal websites, etc.)</li>
-        </ul>
-        <p>If you have some of these qualities and are interested in working with me, please send your CV, transcripts, and 
-        other relevant materials to 
-        <strong><a href="mailto:fme.lab.recruiting@gmail.com">fme.lab.recruiting@gmail.com</a></strong>.</p>
-        -- Dominik WINTERER
-    </div>  
-    </div>
-    {% include slider.html %}
-</section>
-
-
-
-<!--
-<section>
-    <h2>News</h2>
-    <ul class="news list-unstyled">
-        {% for post in site.posts limit: site.front_page_news %}
-            {% include news-item.html item=post %}
-        {% endfor %}
-    </ul>
-    {% assign numposts = site.posts | size %}
-    {% if numposts >= 1 %}
-        <p>
-            <span class="fa fa-fw fa-history"></span>
-            <a href="{{ site.base }}/blog.html">Older posts&hellip;</a>
-        </p>
-    {% endif %}
-</section>
-
-<section>
-    <h2>Research</h2>
-    <div class="card-columns">
-        {% comment %}
-        Sort the projects by date, putting those without dates last
-        {% endcomment %}
-        {% assign projects_by_date = site.projects | sort: 'last-updated', 'first' %}
-        {% assign projects_by_date = projects_by_date | reverse %}
-        {% for p in projects_by_date %}
-            {% if p.status != "inactive" %}
-                {% include project-card.html project=p %}
-            {% endif %}
-        {% endfor %}
-    </div>
-</section>
-
 <div id="people">
     <h2>People</h2>
-    {% for role-table in page.role-tables %}
-        <section class="people row justify-content-between">
-            {% for role-column in role-table %}
-                <div class="col-md-{{ role-column.width }}">
-                    {% for role in role-column.roles %}
-                        {% include role-people.html role=role image=role-column.image %}
-                    {% endfor %}
-                </div>
-            {% endfor %}
-        </section>
+    <br />
+
+<!-- ================= NON-ALUMNI ================= -->
+{% for role-table in page.role-tables %}
+  <section class="people row">
+    {% for role-column in role-table %}
+      <div class="col-md-{{ role-column.width }}">
+        {% for role in role-column.roles %}
+          {% unless role == "alumni" %}
+            {% include role-people.html role=role image=role-column.image %}
+          {% endunless %}
+        {% endfor %}
+      </div>
     {% endfor %}
+  </section>
+{% endfor %}
 </div>
--->
+</section>
+
+<!-- ================= ALUMNI ================= -->
+<!--<br />-->
+<!--<h3>Alumni</h3>-->
+<!--<br />-->
+
+<section class="people row">
+  <div class="col-12">
+    {% for role-table in page.role-tables %}
+      {% for role-column in role-table %}
+        {% for role in role-column.roles %}
+          {% if role == "alumni" %}
+            {% include role-people.html role=role image=role-column.image %}
+          {% endif %}
+        {% endfor %}
+      {% endfor %}
+    {% endfor %}
+  </div>
+</section>
