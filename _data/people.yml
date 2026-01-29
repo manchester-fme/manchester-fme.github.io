@@ -6,12 +6,12 @@ dw:
     image: /img/people/dominik-winterer.png
     bio: Assistant Professor 
 
-#lm:
-    #display_name: "Lu Maltsis"
-    #webpage: ""
-    #role: member 
-    #image: /img/people/lu-maltsis.png
-    #bio: PhD Student
+lm:
+    display_name: "Lu Maltsis"
+    webpage: ""
+    role: member 
+    image: /img/people/lu-maltsis.png
+    bio: PhD Student
 
 az:
     display_name: "Andrei Zhukov"
