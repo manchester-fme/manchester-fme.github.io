@@ -10,7 +10,7 @@ lm:
     display_name: "Lu Maltsis"
     webpage: "https://lmaltsis.github.io/"
     role: member 
-    image: /img/people/lu-maltsis.png
+    image:
     bio: PhD Student
 
 az:
