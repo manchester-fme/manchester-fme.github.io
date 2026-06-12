@@ -11,6 +11,9 @@ role-tables:
   - roles: [alumni]
     width: 20 
     image: true 
+  - roles: [prev-intern]
+    width: 20 
+    image: true 
 
 ---
 <section>
@@ -32,9 +35,9 @@ role-tables:
     <div>
     <strong>Core Areas:</strong>
     <ul>
+      <li>Software Engineering / Programming Languages</li>
       <li>Formal Methods</li>
       <li>Security</li>
-      <li>Software Engineering / Programming Languages</li>
     </ul>
     </div> 
 </div>
@@ -44,6 +47,7 @@ role-tables:
 <div id="news">
     <h2>News</h2>
     <ul>
+        <li><b> May '26</b> &nbsp;  Andrei Zhukov's abstract on <i>CAST: Continuous Fuzzing for SMT Solvers</i> has been accepted at  <a href="https://pldi26.sigplan.org/track/pldi-2026-src">PLDI SRC '26</a>! </li>        
         <li><b> Jan '26</b> &nbsp;  Lu Maltsis joins the lab as a PhD. student! 🎉</li>        
         <li><b> Dec '25</b> &nbsp;  Dominik will be co-organizing the <a href="https://conf.researchr.org/committee/ase-2026/ase-2026-organizing-committee">ASE '26 student research competition</a></li>        
     </ul>
@@ -62,9 +66,9 @@ role-tables:
     {% for role-column in role-table %}
       <div class="col-md-{{ role-column.width }}">
         {% for role in role-column.roles %}
-          {% unless role == "alumni" %}
+          {% if role == "member" %}
             {% include role-people.html role=role image=role-column.image %}
-          {% endunless %}
+          {% endif %}
         {% endfor %}
       </div>
     {% endfor %}
@@ -75,15 +79,32 @@ role-tables:
 
 <!-- ================= ALUMNI ================= -->
 <!--<br />-->
-<!--<h3>Alumni</h3>-->
+<h3>Alumni</h3>
+
+{% for role-table in page.role-tables %}
+  <section class="people row">
+    {% for role-column in role-table %}
+      <div class="col-md-{{ role-column.width }}">
+        {% for role in role-column.roles %}
+          {% if role == "alumni" %}
+            {% include role-people.html role=role image=role-column.image %}
+          {% endif %}
+        {% endfor %}
+      </div>
+    {% endfor %}
+  </section>
+{% endfor %}
+
+<!-- ================= FORMER Members ================= -->
 <!--<br />-->
+<h3>Previous Interns</h3>
 
 <section class="people row">
   <div class="col-12">
     {% for role-table in page.role-tables %}
       {% for role-column in role-table %}
         {% for role in role-column.roles %}
-          {% if role == "alumni" %}
+          {% if role == "prev-intern" %}
             {% include role-people.html role=role image=role-column.image %}
           {% endif %}
         {% endfor %}

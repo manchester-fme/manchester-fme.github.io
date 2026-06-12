@@ -16,20 +16,20 @@ lm:
 az:
     display_name: "Andrei Zhukov"
     webpage: "https://www.linkedin.com/in/andrei-zhukov-a691022b0"
-    role: member 
+    role: alumni 
     image: /img/people/andrei-zhukov.png
-    bio: MSc Student <br> (ETH Zurich)
+    bio: MSc Thesis <br> Now at GetYourGuide  
 
 jb:
     display_name: "Joshua Bode"
     webpage: "https://www.linkedin.com/in/joshuabode/?originalSubdomain=uk"
-    role: member 
-    image: /img/people/joshua-bode.png
-    bio: BSc Student <br> (U Manchester) 
+    role: prev-intern 
+    image: 
+    bio: BSc Student intern 
 
 nk:
     display_name: "Nikita Kroshko"
     webpage: "https://www.linkedin.com/in/nikita-kroshko-computer-science/"
-    role: member 
+    role: prev-intern  
     image:
-    bio: BSc Student <br> (U Manchester) 
+    bio: BSc Student intern <br> (U Manchester) 
