@@ -1,0 +1,17 @@
+<svg viewBox="51 98.5 350 303" xmlns="http://www.w3.org/2000/svg" role="img">
+  <title>FME Lab logomark</title>
+  <defs>
+    <clipPath id="uc"><polygon points="138.5,98.5 313.5,98.5 401,250 51,250"/></clipPath>
+    <clipPath id="lc"><polygon points="401,250 313.5,401.5 138.5,401.5 51,250"/></clipPath>
+  </defs>
+  <polygon points="138.5,98.5 313.5,98.5 401,250 51,250" fill="#FFCC33"/>
+  <polygon points="401,250 313.5,401.5 138.5,401.5 51,250" fill="#660099"/>
+  <g clip-path="url(#uc)" fill="#660099">
+    <rect x="180" y="129" width="20" height="108"/>
+    <rect x="180" y="173" width="92" height="20"/>
+  </g>
+  <g clip-path="url(#lc)">
+    <polyline points="159,285 207,317 159,349" fill="none" stroke="#FFFFFF" stroke-width="16" stroke-linecap="round" stroke-linejoin="round"/>
+    <rect x="225" y="339" width="68" height="14" rx="3" fill="#FFFFFF"/>
+  </g>
+</svg>
