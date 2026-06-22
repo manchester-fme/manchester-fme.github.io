@@ -4,14 +4,14 @@ dw:
     github: wintered 
     role: member 
     image: /img/people/dominik-winterer.png
-    bio: Assistant Professor 
+    bio: Group Leader 
 
 lm:
     display_name: "Lu Maltsis"
     webpage: "https://lmaltsis.github.io/"
     role: member 
     image: /img/people/lu-maltsis.jpg
-    bio: PhD Student
+    bio: PhD Student <br> Co-advised by Lucas Cordeiro
 
 az:
     display_name: "Andrei Zhukov"
