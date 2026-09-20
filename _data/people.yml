@@ -4,7 +4,7 @@ dw:
     github: wintered 
     role: member 
     image: /img/people/dominik-winterer.png
-    bio: Group Leader 
+    bio: Lab lead
 
 lm:
     display_name: "Lu Maltsis"
@@ -30,6 +30,12 @@ jb:
 nk:
     display_name: "Nikita Kroshko"
     webpage: "https://www.linkedin.com/in/nikita-kroshko-computer-science/"
-    role: prev-intern  
+    role: prev-intern
     image:
-    bio: BSc Student intern <br> (U Manchester) 
+    bio: BSc Student intern <br> (U Manchester)
+
+ta:
+    display_name: "Taimor Alam"
+    role: member
+    image:
+    bio: BSc Student <br> (U Manchester)
