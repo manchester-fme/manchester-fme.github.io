@@ -106,7 +106,7 @@ ul.news {
 }
 
 @media (min-width: 768px) {
-    .role.member    { column-count: 3 }
+    .role.member    { display: grid; grid-template-columns: repeat(3, 1fr); column-gap: 1.5rem; }
     //.role.grad      { column-count: 2 }
     .project-people { column-count: 3 }
     .card-columns   { column-count: 3 }
