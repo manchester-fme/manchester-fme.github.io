@@ -15,8 +15,9 @@ lm:
 
 ks:
     display_name: "Kareem Seifo"
+    webpage: "https://www.linkedin.com/in/kareem-seifo/"
     role: member
-    image:
+    image: /img/people/kareem-seifo.jpg
     bio: PhD Student
 
 az:
