@@ -43,6 +43,7 @@ nk:
 
 ta:
     display_name: "Taimor Alam"
+    webpage: "https://www.linkedin.com/in/taimoralam/"
     role: member
-    image:
+    image: /img/people/taimor-alam.jpg
     bio: BSc Student <br> (U Manchester)
