@@ -60,7 +60,7 @@ a > .fa {
 
  @media (min-width: 768px) { 
      .container { 
-         max-width: 800px; 
+         max-width: 880px; 
      } 
  } 
 
@@ -99,6 +99,10 @@ ul.news {
     }
 }
 
+#news ul {
+    font-size: 90%;
+}
+
 @media (min-width: 576px) {
     .project-people { column-count: 2 }
     .card-columns   { column-count: 2 }
@@ -106,7 +110,7 @@ ul.news {
 }
 
 @media (min-width: 768px) {
-    .role.member    { display: grid; grid-template-columns: repeat(3, 1fr); column-gap: 1.5rem; }
+    .role.member    { display: grid; grid-template-columns: repeat(3, 1fr); column-gap: 3rem; }
     //.role.grad      { column-count: 2 }
     .project-people { column-count: 3 }
     .card-columns   { column-count: 3 }
@@ -156,7 +160,7 @@ section {
 .person {
     font-size:85%;
 
-    margin-bottom: 10px;
+    margin-bottom: 40px;
 
     .profile {
         height: 80px;
